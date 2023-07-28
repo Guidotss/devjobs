@@ -14,7 +14,7 @@ module.exports = {
       },
     },
     colors: {
-      "violet": "#9E7F66",
+      "violet": "#5964E0",
       "light_violet" : "#939BF4",
       "very_dark_blue": "#19202D",
       "midnight": "#121721",
