@@ -10,11 +10,16 @@ export const useJobsStore = create<JobsStore>((set) => ({
   jobs: [],
   setJobs: async () => {
     try {
-      const response = await fetch("/api/jobs");
+      const response = await fetch("/api/jobs", {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
       const data = await response.json();
+
       if (data.ok) {
-        const { jobs } = await data.json();
-        set({ jobs });
+        set({ jobs: data.jobs });
       }
     } catch (error) {
       console.log(error);

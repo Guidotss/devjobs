@@ -1,9 +1,9 @@
-import { MobileBgPatternHeaderIcon } from '@/components'
+import { JobsGrid, MobileBgPatternHeaderIcon } from '@/components'
 
 
 export default function Home() {
   return (
-    <main className="w-full h-screen bg-light_gray">
+    <main className="w-full h-full bg-light_gray">
       <header className='bg-violet w-full'>
         <div className='flex justify-end'>
           <MobileBgPatternHeaderIcon/>
@@ -16,6 +16,9 @@ export default function Home() {
           />
         </form>
       </header>
+      <section className='flex justify-center mt-16'>
+        <JobsGrid/>
+      </section>
     </main>
   )
 }

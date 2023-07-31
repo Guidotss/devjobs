@@ -14,14 +14,14 @@ module.exports = {
       },
     },
     colors: {
-      "violet": "#5964E0",
-      "light_violet" : "#939BF4",
+      "gray":           "#9DAEC2",
+      "white":          "#FFFFFF",
+      "violet":         "#5964E0",
+      "midnight":       "#121721",
+      "dark_gray":      "#6E8098",
+      "light_gray":     "#F4F6F8",
+      "light_violet" :  "#939BF4",
       "very_dark_blue": "#19202D",
-      "midnight": "#121721",
-      "light_gray": "#F4F6F8",
-      "gray": "#9DAEC2",
-      "dark_gray": "#6E8098",
-
     }
   },
   plugins: [],
