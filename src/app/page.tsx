@@ -1,5 +1,5 @@
 import { MobileBgPatternHeaderIcon } from '@/components'
-import Image from 'next/image'
+
 
 export default function Home() {
   return (
@@ -12,8 +12,7 @@ export default function Home() {
           <input 
             className='absolute -mt-5 py-4 px-6 rounded-lg'
             type="text"
-            placeholder="Filter by tile..."
-
+            placeholder="Filter by title..."
           />
         </form>
       </header>
