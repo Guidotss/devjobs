@@ -50,3 +50,30 @@
 .Typemaster{
     background-color: #F16718;
 }
+
+@keyframes moveRight {
+    0% {
+        margin-left: 0;
+    }
+
+    100% {
+        margin-left: 30px;
+    }
+}
+
+@keyframes moveLeft {
+    0% {
+        margin-left: 30px;
+    }
+
+    100% {
+        margin-left: 0;
+    }   
+}
+
+.moveRight {
+    animation: moveRight 0.5s ease-in-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+}

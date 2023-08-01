@@ -33,6 +33,10 @@ module.exports = {
       "electric_blue": "#4722C6",
       "very_dark_blue": "#19202D",
       "dark_slate_gray": "#34353F",
+    },
+    animation: {
+      'move-right' : 'moveRight 0.5s',
+      'move-left' : 'moveLeft 0.5s',
     }
   },
   plugins: [],
