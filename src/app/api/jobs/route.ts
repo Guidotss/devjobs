@@ -1,11 +1,11 @@
-import { JobService } from '@/services'; 
+import { JobService } from '@/services';
 
 const jobService = new JobService();
 
 export async function GET(req: Request) {
   try {
     const jobs = await jobService.getJobs();
-    if(!jobs){
+    if (!jobs) {
       return new Response(
         JSON.stringify({ ok: false, message: "Jobs not found" }),
         { status: 404 }

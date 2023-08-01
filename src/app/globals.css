@@ -1,3 +1,52 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.Scoot{
+    background-color: #E99210;
+}
+
+.Blogr{
+    background-color: #E54D25;
+}
+
+.Vector{
+    background-color: #34353F;
+}
+
+.Office-Lite{
+    background-color: #21427D;
+}
+
+.Pod {
+    background-color: #132034;
+}
+
+.Creative {
+    background-color: #4E1853;
+}
+
+.Pomodoro {
+    background-color: #4722C6;
+}
+
+.Maker {
+    background-color: #21427D;
+}
+
+.Coffeeroasters {
+    background-color: #F2DECB;
+}
+
+.Mastercraft {
+    background-color: #1F1F1F;
+}
+
+.Crowdfund {
+    background-color: #37C790;
+}
+
+.Typemaster{
+    background-color: #F16718;
+}
