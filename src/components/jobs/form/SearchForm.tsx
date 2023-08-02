@@ -2,20 +2,30 @@
 import { useTheme } from 'next-themes';
 import { FilterIcon } from '@/components/ui/icons/FilterIcon';
 import { SearchIcon } from '@/components/ui/icons/SearchIcon';
-import { useUiStore } from '@/store';
+import { useJobsStore, useUiStore } from '@/store';
 import { FilterModal } from '@/components/ui/FilterModal';
+import { useState } from 'react';
 
 export const SearchForm = () => {
+  const [position, setPosition]  = useState<string>(""); 
   const { theme } = useTheme(); 
   const { toggleModal, isModalOpen } = useUiStore();
+  const { filterJobs } = useJobsStore(); 
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault(); 
+    filterJobs(position);
+    console.log(position); 
+  }
 
   return (
     <>
-      <form className="flex flex-col items-center">
+      <form className="flex flex-col items-center" onSubmit={handleSubmit}>
         <input
           className="absolute -mt-5 py-4 px-6 rounded-lg w-[327px]"
           type="text"
           placeholder="Filter by title..."
+          onChange={(e) => setPosition(e.target.value)}
         />
         <div className="absolute right-24 flex items-center gap-4 -mt-3">
           <div onClick={toggleModal}>

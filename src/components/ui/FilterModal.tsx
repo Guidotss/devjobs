@@ -1,8 +1,9 @@
 import { LocationIcon } from "."
+import 'animate.css'; 
 
 export const FilterModal = () => {
   return (
-    <div className="w-[327px] h-[217px] flex flex-col z-10 bg-white absolute self-center  top-32 rounded-sm">
+    <div className="w-[327px] h-[217px] flex flex-col z-10 bg-white absolute self-center  top-32 rounded-sm animate__animated animate__fadeIn animate__faster">
       <div className="text-black border-b-[1px] border-b-gray py-5 px-5">
         <div className="flex items-center gap-2">
           <div>
