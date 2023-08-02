@@ -6,6 +6,7 @@ interface JobsStore {
   completedJobs: Job[];
   setJobs: () => Promise<void>;
   filterJobs: (title: string) => void;
+  filterJobsByLocation: (location: string) => void;
 }
 
 export const useJobsStore = create<JobsStore>((set, get) => ({
@@ -22,7 +23,7 @@ export const useJobsStore = create<JobsStore>((set, get) => ({
       const data = await response.json();
 
       if (data.ok) {
-        set({ jobs: data.jobs , completedJobs: data.jobs});
+        set({ jobs: data.jobs, completedJobs: data.jobs });
       }
     } catch (error) {
       console.log(error);
@@ -34,11 +35,20 @@ export const useJobsStore = create<JobsStore>((set, get) => ({
       job.position.toLowerCase().includes(position.toLowerCase())
     );
 
-    if(position === '') return set({ jobs: completedJobs }); 
+    if (position === "") return set({ jobs: completedJobs });
 
     set({ jobs: filteredJobs });
+  },
 
-    
-    
+  filterJobsByLocation: (location: string) => {
+    const { jobs, completedJobs } = get();
+    const filteredJobs = jobs.filter((job) =>
+      job.location.toLowerCase().includes(location.toLowerCase())
+    );
+
+    if (location === "") return set({ jobs: completedJobs });
+
+    set({ jobs: filteredJobs });
   }
+
 }));
