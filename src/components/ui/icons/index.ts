@@ -4,3 +4,4 @@ export * from './SearchIcon';
 export * from './Logo'; 
 export * from './SunIcon'; 
 export * from './MoonIcon';
+export * from './LocationIcon';
