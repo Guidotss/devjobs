@@ -12,8 +12,7 @@ export const Provider: FC<ProviderProps> = ({ children }) => {
     setMounted(true);
   }, []);
 
-  if (!mounted) return <>{ children }</>;
+  if (!mounted) return <>{children}</>;
 
-  
   return <ThemeProvider>{children}</ThemeProvider>;
 };
