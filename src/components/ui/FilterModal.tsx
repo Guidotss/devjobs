@@ -1,18 +1,21 @@
 "use client"
+import { useState } from 'react';
 import { useJobsStore, useUiStore } from "@/store";
 import { LocationIcon } from "."
 import 'animate.css'; 
-import { useState } from 'react';
 
 export const FilterModal = () => {
-  const { filterJobsByLocation } = useJobsStore(); 
+  const { filterJobsByLocation, filterJobsByContract, isFullTimeOnly, toggleFullTimeOnly } = useJobsStore(); 
   const { toggleModal } = useUiStore(); 
   const [location, setLocation] = useState<string>("");
+  
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     filterJobsByLocation(location);
+    filterJobsByContract(); 
     toggleModal();
   }
+
 
   return (
     <form className="w-[327px] h-[217px] flex flex-col z-10 bg-white absolute self-center  top-32 rounded-sm animate__animated animate__fadeIn animate__faster" onSubmit={handleSubmit}>
@@ -32,6 +35,8 @@ export const FilterModal = () => {
         <input
           className="w-[30px] h-[30px] opacity-20 cursor-pointer"
           type="checkbox"
+          checked={isFullTimeOnly}
+          onChange={toggleFullTimeOnly}
         />  
         <h3 className="text-black font-bold text-lg">Full time only</h3>
       </div>

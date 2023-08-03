@@ -4,14 +4,24 @@ import { Job } from "@/interfaces";
 interface JobsStore {
   jobs: Job[];
   completedJobs: Job[];
+  isFullTimeOnly: boolean;
+  toggleFullTimeOnly: () => void;
   setJobs: () => Promise<void>;
   filterJobs: (title: string) => void;
   filterJobsByLocation: (location: string) => void;
+  filterJobsByContract: () => void;
 }
 
 export const useJobsStore = create<JobsStore>((set, get) => ({
   jobs: [],
   completedJobs: [],
+  isFullTimeOnly: false,
+
+  toggleFullTimeOnly: () => {
+    const { isFullTimeOnly } = get();
+    set({ isFullTimeOnly: !isFullTimeOnly });
+  },
+
   setJobs: async () => {
     try {
       const response = await fetch("/api/jobs", {
@@ -48,5 +58,15 @@ export const useJobsStore = create<JobsStore>((set, get) => ({
     if (location === "") return set({ jobs: completedJobs });
 
     set({ jobs: filteredJobs });
+  },
+
+  filterJobsByContract: () => {
+    const { completedJobs, isFullTimeOnly } = get();
+    if (isFullTimeOnly) {
+      const filteredJobs = completedJobs.filter(
+        (job) => job.contract === "Full Time"
+      );
+      set({ jobs: filteredJobs });
+    }
   },
 }));
