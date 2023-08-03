@@ -30,25 +30,23 @@ export const useJobsStore = create<JobsStore>((set, get) => ({
     }
   },
   filterJobs: (position: string) => {
-    const { jobs, completedJobs } = get();
-    const filteredJobs = jobs.filter((job) =>
+    const { completedJobs } = get();
+
+    const filteredJobs = completedJobs.filter((job) =>
       job.position.toLowerCase().includes(position.toLowerCase())
     );
-
-    if (position === "") return set({ jobs: completedJobs });
 
     set({ jobs: filteredJobs });
   },
 
   filterJobsByLocation: (location: string) => {
-    const { jobs, completedJobs } = get();
-    const filteredJobs = jobs.filter((job) =>
+    const { completedJobs } = get();
+    const filteredJobs = completedJobs.filter((job) =>
       job.location.toLowerCase().includes(location.toLowerCase())
     );
 
     if (location === "") return set({ jobs: completedJobs });
 
     set({ jobs: filteredJobs });
-  }
-
+  },
 }));
