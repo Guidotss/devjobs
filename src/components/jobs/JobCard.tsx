@@ -12,7 +12,7 @@ interface JobCardProps {
 
 export const JobCard: FC<JobCardProps> = ({ job }) => {
   const { theme } = useTheme(); 
-  const router = useRouter(); 
+  const router = useRouter();
 
 
 
