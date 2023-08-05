@@ -35,12 +35,12 @@ export default async function Jobpage({ params: { id } }: JobPageProps) {
       </section>
       <section className="w-[327px] rounded-md p-10 job-description">
         <div className="flex items-center text-gray text-sm gap-2">
-          <span>{job.postedAt}</span>
+          <span>{job?.postedAt}</span>
           <span className="w-1 h-1 rounded-full bg-gray mt-1" />
-          <span>{job.contract}</span>
+          <span>{job?.contract}</span>
         </div>
-        <h1 className="text-white text-lg font-bold mt-5 sub-title">{job.position}</h1>
-        <h3 className="text-violet text-sm font-bold mt-2">{job.location}</h3>
+        <h1 className="text-white text-lg font-bold mt-5 sub-title">{job?.position}</h1>
+        <h3 className="text-violet text-sm font-bold mt-2">{job?.location}</h3>
         <div className="mt-10 flex justify-center">
           <Link href={job.apply}>
             <span className="px-20 py-3  text-white font-semibold bg-violet rounded-md">
@@ -49,12 +49,12 @@ export default async function Jobpage({ params: { id } }: JobPageProps) {
           </Link>
         </div>
         <article className="mt-10">
-          <section className="description">{job.description}</section>
+          <section className="description">{job?.description}</section>
           <section className="mt-10">
             <header>
               <h3 className="text-xl font-bold sub-title">Requirements</h3>
             </header>
-            <p className="mt-5 description">{job.requirements.content}</p>
+            <p className="mt-5 description">{job?.requirements.content}</p>
             <ul className="mt-10">
               {job.requirements.items.map((item, index) => (
                 <div key={index} className="flex mt-10">
@@ -69,9 +69,9 @@ export default async function Jobpage({ params: { id } }: JobPageProps) {
           <header>
             <h3 className="text-xl font-bold sub-title">What you will do</h3>
           </header>
-          <p className="mt-5 text-gray description">{job.role.content}</p>
+          <p className="mt-5 text-gray description">{job?.role.content}</p>
           <ol className="mt-10">
-            {job.role.items.map((item, index) => (
+            {job?.role.items.map((item, index) => (
               <div key={index} className="flex">
                 <span className="text-violet text-lg font-semibold absolute mt-5 ">
                   {index + 1}
@@ -83,7 +83,7 @@ export default async function Jobpage({ params: { id } }: JobPageProps) {
         </article>
       </section>
       <div className="w-full h-28 flex justify-center items-center apply-now-footer">
-        <Link href={job.apply}>
+        <Link href={job?.apply}>
           <span className="px-[7.5rem] py-4  text-white font-semibold bg-violet rounded-md">
             Apply Now
           </span>
