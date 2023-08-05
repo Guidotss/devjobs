@@ -29,7 +29,7 @@ export const SearchFormMobile = () => {
         <div className="absolute flex justify-end items-center gap-4 -mt-3 w-[300px]">
           <div onClick={toggleModal}>
             <FilterIcon fill={`${ theme !== 'light' ? '#fff' : "" }`} />
-          </div>
+          </div>  
           <button className="bg-violet p-2 rounded-md">
             <SearchIcon fill='#fff' />
           </button>

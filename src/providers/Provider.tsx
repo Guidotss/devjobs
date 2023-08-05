@@ -8,6 +8,7 @@ interface ProviderProps {
 
 export const Provider: FC<ProviderProps> = ({ children }) => {
   const [mounted, setMounted] = useState(false);
+  
   useEffect(() => {
     setMounted(true);
   }, []);
