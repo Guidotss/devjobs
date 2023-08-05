@@ -33,17 +33,21 @@ export default async function Jobpage({ params: { id } }: JobPageProps) {
       <section>
         <JobDetailscard job={job} />
       </section>
-      <section className="w-[327px] rounded-md p-10 job-description">
-        <div className="flex items-center text-gray text-sm gap-2">
-          <span>{job?.postedAt}</span>
-          <span className="w-1 h-1 rounded-full bg-gray mt-1" />
-          <span>{job?.contract}</span>
+      <section className="w-[327px] lg:w-[730px] md:w-[689px] rounded-md p-10 job-description">
+        <div className="flex flex-col text-gray text-sm gap-2">
+          <div className="flex items-center gap-2">
+            <span>{job?.postedAt}</span>
+            <span className="w-1 h-1 rounded-full bg-gray" />
+            <span>{job?.contract}</span>
+          </div>
+          <h1 className="text-white text-lg font-bold mt-3 sub-title">
+            {job?.position}
+          </h1>
         </div>
-        <h1 className="text-white text-lg font-bold mt-5 sub-title">{job?.position}</h1>
         <h3 className="text-violet text-sm font-bold mt-2">{job?.location}</h3>
-        <div className="mt-10 flex justify-center">
+        <div className="mt-10 md:-mt-14 md:mb-24  flex justify-center md:justify-end">
           <Link href={job.apply}>
-            <span className="px-20 py-3  text-white font-semibold bg-violet rounded-md">
+            <span className="px-20 py-3 md:px-5   text-white font-semibold bg-violet rounded-md md:rounded-sm">
               Apply Now
             </span>
           </Link>
@@ -82,9 +86,13 @@ export default async function Jobpage({ params: { id } }: JobPageProps) {
           </ol>
         </article>
       </section>
-      <div className="w-full h-28 flex justify-center items-center apply-now-footer">
+      <div className="w-full h-28 flex justify-center items-center apply-now-footer md:justify-between md:px-10">
+        <div className="md:block hidden">
+            <h3 className="text-lg font-semibold">{job.position}</h3>
+            <span className="text-gray opacity-90 text-sm">{job.company}</span>
+        </div>
         <Link href={job?.apply}>
-          <span className="px-[7.5rem] py-4  text-white font-semibold bg-violet rounded-md">
+          <span className="px-[7.5rem] py-4 md:px-8  text-white font-semibold bg-violet rounded-md">
             Apply Now
           </span>
         </Link>

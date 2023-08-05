@@ -26,7 +26,7 @@ export const SearchFormMobile = () => {
           placeholder="Filter by title..."
           onChange={(e) => setPosition(e.target.value)}
         />
-        <div className="absolute right-24 flex items-center gap-4 -mt-3">
+        <div className="absolute flex justify-end items-center gap-4 -mt-3 w-[300px]">
           <div onClick={toggleModal}>
             <FilterIcon fill={`${ theme !== 'light' ? '#fff' : "" }`} />
           </div>

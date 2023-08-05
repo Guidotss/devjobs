@@ -5,10 +5,10 @@ export default function Home() {
   return (
     <main className="w-full h-full">
       <header className='flex justify-center'>
-        <div className='sm:hidden'>
+        <div className='md:hidden'>
           <SearchFormMobile />
         </div>
-        <div className='hidden sm:flex -mt-7'>
+        <div className='hidden md:flex -mt-7'>
           <SearchForm/>
         </div>
         

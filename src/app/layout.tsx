@@ -22,12 +22,12 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${kumbh.className}`}>
         <Provider>
-            <header className="w-full flex flex-col justify-between bg-violet sm:rounded-bl-full">
+            <header className="w-full flex flex-col justify-between bg-violet md:rounded-bl-[100px]">
               <Navbar />
-              <div className="flex justify-end sm:hidden">
+              <div className="flex justify-end md:hidden">
                 <MobileBgPatternHeaderIcon />
               </div>
-              <div className="sm:flex justify-end hidden">
+              <div className="md:flex justify-end hidden">
                 <DesktopHeaderPattern/>
               </div>
             </header>
