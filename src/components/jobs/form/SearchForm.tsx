@@ -1,48 +1,35 @@
-"use client"
-import { useTheme } from 'next-themes';
-import { FilterIcon } from '@/components/ui/icons/FilterIcon';
-import { SearchIcon } from '@/components/ui/icons/SearchIcon';
-import { useJobsStore, useUiStore } from '@/store';
-import { FilterModal } from '@/components/ui/FilterModal';
-import { useState } from 'react';
+import { LocationIcon, SearchIcon } from "@/components"
+
 
 export const SearchForm = () => {
-  const [position, setPosition]  = useState<string>(""); 
-  const { theme } = useTheme(); 
-  const { toggleModal, isModalOpen } = useUiStore();
-  const { filterJobs } = useJobsStore(); 
-
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault(); 
-    filterJobs(position);
-    console.log(position); 
-  }
-
   return (
-    <>
-      <form className="flex flex-col items-center" onSubmit={handleSubmit}>
-        <input
-          className="absolute -mt-5 py-4 px-6 rounded-lg w-[327px]"
-          type="text"
-          placeholder="Filter by title..."
-          onChange={(e) => setPosition(e.target.value)}
-        />
-        <div className="absolute right-24 flex items-center gap-4 -mt-3">
-          <div onClick={toggleModal}>
-            <FilterIcon fill={`${ theme !== 'light' ? '#fff' : "" }`} />
-          </div>
-          <button className="bg-violet p-2 rounded-md">
-            <SearchIcon fill='#fff' />
-          </button>
+    <form className="flex">
+        <div className="flex items-center">
+            <input
+                className="px-14 py-5 w-96 rounded-l-md bg-very_dark_blue focus:outline-none"
+                placeholder="Filter by title, companies, expertise…"
+            />
+            <div className="absolute ml-5">
+                <SearchIcon/>
+            </div>
         </div>
-      </form>
-      {isModalOpen && (
-        <>
-          <div className='flex items-center justify-center min-h-screen w-full bg-black bg-opacity-40 absolute z-10' onClick={toggleModal}/>
-          <FilterModal/>
-        </>
-        
-      )}
-    </>
-  );
-};
+        <div className="flex items-center">
+            <input
+                className="px-12 py-5 w-72 bg-very_dark_blue border-l-[1px] border-dark_gray border-opacity-30 focus:outline-none"
+                placeholder="Filter by location..."
+            />
+            <div className="absolute ml-5">
+                <LocationIcon/>
+            </div>
+        </div>
+        <div className="flex gap-5  w-80 items-center bg-very_dark_blue border-l-[1px] border-gray border-opacity-30 rounded-r-md">
+            <input
+                type="checkbox"
+                className="w-5 h-5 ml-5 bg-very_dark_blue rounded-md focus:outline-none"
+            />
+            <span className="font-semibold">Full Time Only</span>
+            <button className="px-8 py-2 bg-violet rounded-lg font-semibold">Search</button>
+        </div>
+    </form>
+  )
+}

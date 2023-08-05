@@ -21,7 +21,7 @@ export const JobCard: FC<JobCardProps> = ({ job }) => {
   }
   return (
     <div className={`flex flex-col p-5 min-w-[327px] min-h-[228px] ${ theme == 'light' ? 'bg-white' : 'bg-very_dark_blue' } rounded-lg cursor-pointer`} onClick={handleNavigate}>
-      <div className={`${job.company.split(" ").join("-")} h-[55px] px-1 flex items-center justify-center rounded-2xl absolute left-24 -mt-11 shadow-md`}>
+      <div className={`${job.company.split(" ").join("-")} h-[55px] px-1 flex items-center justify-center rounded-2xl absolute  -mt-11 shadow-md`}>
         <Image src={job.logo} alt={job.company} width={50} height={50} className='p-[3px]'/>
       </div>
       <div className="flex text-gray mt-5 items-center gap-3">

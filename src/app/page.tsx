@@ -1,10 +1,16 @@
-import { JobsGrid,  SearchForm } from '@/components'
+import { JobsGrid, SearchForm, SearchFormMobile } from '@/components'
 
 export default function Home() {
   return (
     <main className="w-full h-full">
-      <header className="bg-violet w-full flex flex-col justify-between">
-        <SearchForm />
+      <header className='flex justify-center'>
+        <div className='sm:hidden'>
+          <SearchFormMobile />
+        </div>
+        <div className='hidden sm:flex -mt-7'>
+          <SearchForm/>
+        </div>
+        
       </header>
       <section className='flex justify-center mt-16'>
         <JobsGrid/>

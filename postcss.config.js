@@ -3,5 +3,8 @@ module.exports = {
     tailwindcss: {},
     autoprefixer: {},
     'tailwindcss/nesting': {},
+    'postcss-nested': {},
+    'postcss-import': {},
+    
   },
 }

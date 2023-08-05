@@ -1,2 +1,3 @@
 
-export * from './SearchForm'; 
+export * from './mobile/SearchFormMobile'; 
+export * from './SearchForm';

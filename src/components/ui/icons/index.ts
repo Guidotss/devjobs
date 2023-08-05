@@ -5,3 +5,4 @@ export * from './Logo';
 export * from './SunIcon'; 
 export * from './MoonIcon';
 export * from './LocationIcon';
+export * from './DesktopHeaderPattern'; 

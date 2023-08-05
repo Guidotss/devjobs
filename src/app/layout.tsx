@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Kumbh_Sans } from "next/font/google";
 import { Provider } from "@/providers";
-import { MobileBgPatternHeaderIcon } from "@/components";
+import { DesktopHeaderPattern, MobileBgPatternHeaderIcon } from "@/components";
 import { Navbar } from "@/components/ui/Navbar";
 
 import "./globals.css";
@@ -20,12 +20,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={kumbh.className}>
+      <body className={`${kumbh.className}`}>
         <Provider>
-            <header className="bg-violet w-full flex flex-col justify-between">
+            <header className="w-full flex flex-col justify-between bg-violet sm:rounded-bl-full">
               <Navbar />
-              <div className="flex justify-end">
+              <div className="flex justify-end sm:hidden">
                 <MobileBgPatternHeaderIcon />
+              </div>
+              <div className="sm:flex justify-end hidden">
+                <DesktopHeaderPattern/>
               </div>
             </header>
             {children}
