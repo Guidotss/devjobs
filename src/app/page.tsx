@@ -1,4 +1,5 @@
-import { JobsGrid, SearchForm, SearchFormMobile } from '@/components'
+import { JobsGrid, SearchFormMobile, SearchForm } from '@/components'
+
 
 export default function Home() {
   return (
@@ -12,7 +13,7 @@ export default function Home() {
         </div>
         
       </header>
-      <section className='flex justify-center mt-16'>
+      <section className='flex justify-center mt-16 mb-5'>
         <JobsGrid/>
       </section>
     </main>
