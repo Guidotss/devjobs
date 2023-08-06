@@ -1,54 +1,54 @@
-# Devjobs web app
+## Welcome to Devjobs 👋
 
 ![Design preview for the Devjobs web app coding challenge](./preview.jpg)
 
 
-**To do this challenge, you need a solid understanding of HTML, CSS, and JavaScript.**
-
-## The challenge
-
-Your challenge is to build out this jobs board using a local `data.json` to retrieve the data. Your goal is to try to get your project looking as close to the design as possible.
-
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
-
-We provide the data in a local `data.json` file, so use that to populate the content on the first load. If you want to take it up a notch, feel free to build this as a full-stack application!
-
-Your users should be able to:
-
-- View the optimal layout for each page depending on their device's screen size
-- See hover states for all interactive elements throughout the site
-- Be able to filter jobs on the index page by title, location, and whether a job is for a full-time position
-- Be able to click a job from the index page so that they can read more information and apply for the job
-- **Bonus**: Have the correct color scheme chosen for them based on their computer preferences. _Hint_: Research `prefers-color-scheme` in CSS.
 
 
-## Where to find everything
+Thansk for checking out this Full Stack coding challenge.
 
-Your task is to build out the project to the design file provided. We provide both Sketch and Figma versions of the design, so you can choose which tool you prefer to use. You can download the design file on the platform. The design download comes with a `README.md` file as well to help you get set up.
+[Devjobs](https://devjobs-kappa.vercel.app/) is a web app that allows you to search for jobs by title, location, and skills. You can also filter jobs by type (full time, part time, contract, etc.) and by company.
 
-All the required assets for this project are in the `/assets` folder. The assets are already exported for the correct screen size and optimized. Some images are reusable at multiple screen sizes. So if you don't see an image in a specific folder, it will typically be in another folder for that page.
 
-The design system in the design file will give you more information about the various colors, fonts, and styles used in this project.
+## 🚀 Quick start
 
-## Building your project
+1.  **Clone the repo.**
 
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
+    ```shell
+    git clone
+    ```
+2.  **Rename .template.env to .env and add your own Database URL.**
+3.  **Install dependencies.**
+4.  **Start developing.**
 
-1. Separate the `starter-code` from the rest of this project and rename it to something meaningful for you. Initialize the codebase as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/).
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
+    Navigate into your new site’s directory and start it up.
 
-## Deploying your project
+    ```shell
+    cd devjobs/
+    npm install
+    npm run dev
+     # or 
+    yarn install
+    yarn dev
+    ```
 
-As mentioned above, there are many ways to host your project for free. Our recommend hosts are:
+## 🛠️ Tech Stack 
 
-- [GitHub Pages](https://pages.github.com/)
+- [Next.js](https://nextjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [MongoDB](https://www.mongodb.com/)
+- [Prisma](https://www.prisma.io/)
+- [Zustand](https://docs.pmnd.rs/zustand/getting-started/introduction)
+- [TypeScript](https://www.typescriptlang.org/)
 - [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
 
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://medium.com/frontend-mentor/frontend-mentor-trusted-hosting-providers-bf000dfebe).
 
-**Have fun building!** 🚀
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+## 🤝 Contributing
+
+Contributions, issues and feature requests are welcome!
+
