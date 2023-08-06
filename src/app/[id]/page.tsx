@@ -47,7 +47,7 @@ export default async function Jobpage({ params: { id } }: JobPageProps) {
         <h3 className="text-violet text-sm font-bold mt-2">{job?.location}</h3>
         <div className="mt-10 md:-mt-14 md:mb-24  flex justify-center md:justify-end">
           <Link href={job.apply}>
-            <span className="px-20 py-3 md:px-5   text-white font-semibold bg-violet rounded-md md:rounded-sm">
+            <span className="px-20 py-3 md:px-5   text-white font-semibold bg-violet rounded-md md:rounded-sm hover:bg-[#939BF4] transition-colors duration-300 ease-in-out">
               Apply Now
             </span>
           </Link>
@@ -92,7 +92,7 @@ export default async function Jobpage({ params: { id } }: JobPageProps) {
             <span className="text-gray opacity-90 text-sm">{job.company}</span>
         </div>
         <Link href={job?.apply}>
-          <span className="px-[7.5rem] py-4 md:px-8  text-white font-semibold bg-violet rounded-md">
+          <span className="px-[7.5rem] py-4 md:px-8  text-white font-semibold bg-violet rounded-md hover:bg-[#939BF4] transition-colors duration-300 ease-in-out">
             Apply Now
           </span>
         </Link>

@@ -58,7 +58,7 @@ export const SearchForm = () => {
                 onChange={(e) => setFilterForm({...filterForm, fullTime: e.target.checked})}
             />
             <span className="font-semibold">Full Time Only</span>
-            <button className={`lg:px-8 py-2 md:px-5 bg-violet rounded-lg font-semibold text-white`} type='submit'>Search</button>
+            <button className={`lg:px-8 py-2 md:px-5 bg-violet rounded-lg font-semibold text-white hover:bg-[#939BF4] transition-colors duration-300 ease-in-out`} type='submit'>Search</button>
         </div>
     </form>
   )
